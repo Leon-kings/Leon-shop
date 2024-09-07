@@ -1,6 +1,6 @@
 // import React from 'react'
 import Slider from "../../Components/slide/Slide"
-// import Example from "../../Components/product/Products"
+import Example from "../../Components/product/Products"
 import Product from "../../Components/Prodct/Product"
 function Home() {
   return (
@@ -9,14 +9,17 @@ function Home() {
             <div className="head px-0 py-0">
                 <h2 className="text-center hover:text-red-500">Leon-Shop
                 </h2>
+                
             <Slider/>
             </div>
         </div>
-        <div className="container px-2 py-3">
+        <hr className="bg-blue-400 text-blue-800"/>
+        <br />
+        <div className="container px-2 py-2">
           <div className="products">
             <Product/>
           </div>
-          {/* <Example/> */}
+          <Example/>
         </div>
 
     </div>

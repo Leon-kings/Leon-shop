@@ -12,25 +12,45 @@ const Slider = () => {
 
     return (
         <section className='bg-white mt-10 mx-4 sm:mx-8 md:mx-20 lg:mx-36 z-10'>
-            <div className='text-center font-extrabold text-2xl my-8'>Your own Slider</div>
+       
+                
+                   
             <Swiper
                 modules={[Autoplay, A11y]}
                 spaceBetween={30} // Adjust the spacing as needed
                 slidesPerView={1} // Show only one slide by default
                 autoplay
             >
+              
+               
                 {images.map((img, index) => (
                     <SwiperSlide key={index}>
+            <div className="left ">
+                    <div className="head ">
+                        <h2 className="text"> Welcome to Our Leon-Shop</h2>
+                        <p className='content px-4 py-7'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            A velit itaque nemo numquam molestiae cumque ullam, quas, dicta nihil quo omnis 
+                            corporis, natus reprehenderit nulla assumenda obcaecati enim illum fuga.</p>
+                  
+                    </div>
+                    <br />
+                    <div className="contact text-center py-3">
+<button className='btn bg-blue-700 text-white px-3 py-3'>Contact us</button>
+                    </div>
+                </div> 
+
+<div className="left">
                         <a href='/#'>
                             <img
                                 src={img}
                                 alt={`slide-${index + 1}`}
-                                className='w-fit h-[500px] mx-auto select-none'
+                                className='w-[700px] h-[400px] mx-auto select-none'
                             />
-                        </a>
+                        </a></div>
                     </SwiperSlide>
                 ))}
             </Swiper>
+            
         </section>
     );
 };

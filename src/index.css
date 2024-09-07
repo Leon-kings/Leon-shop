@@ -30,6 +30,100 @@ body {
   min-height: 100vh;
 }
 
+/* responsive */
+.left{
+  width: 50%;
+  float: left;
+  /* padding: 0.2em; */
+  
+}
+.right{
+  width: 50%;
+  float: right;
+  /* padding: 0.2em; */
+
+}
+.sxleft{
+  width: 20%;
+  padding: 0.2em;
+  float: left;
+  }
+  .xleft{
+    width: 33.3%;
+    float: left;
+    padding: 0.1em;
+    }
+    .placeholder{
+      border-radius: 12px;
+    }
+    .icon{
+      width: 12px;
+      height: 12px;
+    }
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 162px) {
+  *{
+    width: 100%;
+    padding: auto;
+    margin: 0;
+  }
+
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+.App-header{
+  width: 100%;
+}
+/* home */
+
+
+.container {
+  width: 100%;
+  padding: auto;
+}
+.left{
+width: 100%;
+padding: 0.3em;
+}
+.sxleft{
+width: 100%;
+padding: 0.3em;
+}
+.sleft{
+width: 100%;
+padding: 0.3em;
+}
+.xleft{
+width: 100%;
+padding: 0.3em;
+}
+.column{
+width: 100%;
+}
+
+
+
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+.App-header{
+  width: 100%;
+}
+*{
+
+width: 100%;
+padding: 0;
+margin: 0;
+}
+/* */
+
+}
+
+
+/* responsive */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

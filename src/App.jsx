@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes,  } from 'react-router-dom'
 
 // forms
 import Home from './pages/home/Home'
+import Setting from './pages/settings/Setting'
 // BrowserRouter
 function App() {
 
@@ -18,9 +19,10 @@ function App() {
     <Nav/>
 <Routes>
    <Route element={<Home />} path='/'></Route>
+   <Route element={<Setting />} path='/settings'></Route>
   
     
-     
+  
  
       
     
