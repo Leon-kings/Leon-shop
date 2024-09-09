@@ -12,6 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.card {
+  padding: 2em;
+}
 
 a {
   font-weight: 500;
@@ -43,6 +46,16 @@ body {
   /* padding: 0.2em; */
 
 }
+/* .containerblock{
+  border: 2px solid#12adf0;
+  padding: auto;
+} */
+.image{
+  width: 30%;
+  padding: 0%;
+  height: 100%;
+
+}
 .sxleft{
   width: 20%;
   padding: 0.2em;
@@ -56,10 +69,70 @@ body {
     .placeholder{
       border-radius: 12px;
     }
-    .icon{
+    /* .icon{
       width: 12px;
       height: 12px;
+      text-align: center;
+    } */
+    body {
+      margin: 0;
+      display: flex;
+      place-items: center;
+      min-width: 320px;
+      min-height: 100vh;
     }
+    
+    button {
+      border-radius: 8px;
+      border: 1px solid transparent;
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      font-weight: 500;
+      font-family: inherit;
+      background-color: #ece3e3;
+      cursor: pointer;
+      transition: border-color 0.25s;
+    }
+    .button {
+      border-radius: 8px;
+      border: 1px solid transparent;
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      font-weight: 500;
+      font-family: inherit;
+      background-color: #2048da;
+      cursor: pointer;
+      transition: border-color 0.25s;
+    }
+    .btn {
+      border-radius: 8px;
+      border: 1px solid transparent;
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      font-weight: 500;
+      font-family: inherit;
+      background-color: #12adf0;
+      cursor: pointer;
+      transition: border-color 0.25s;
+    }
+    .block{
+      border-radius: 12px;
+      padding: auto;
+      border-top-left-radius: 0.5em;
+      border: 3px solid #1a1a1a;
+    }
+    .links{
+      display: inline;
+      display: flex;
+    }
+
+    .box{
+      border: 1px solid black;
+      padding: 2px;
+      /* background-color: rgb(238, 243, 243); */
+      border-radius: 8px;
+  }
+
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 162px) {
   *{
@@ -76,7 +149,16 @@ body {
   width: 100%;
 }
 /* home */
-
+.image{
+  width: 100%;
+  max-height: 300px;
+}
+.map{
+  width: 100%;
+}
+.invisible{
+  visibility: hidden;
+}
 
 .container {
   width: 100%;
