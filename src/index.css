@@ -37,13 +37,13 @@ body {
 .left{
   width: 50%;
   float: left;
-  /* padding: 0.2em; */
-  
+  padding: 0.2em;
+  /* background-image: url("./assets//images/agency-img.jpg"); */
 }
 .right{
   width: 50%;
   float: right;
-  /* padding: 0.2em; */
+  padding: 0.2em;
 
 }
 /* .containerblock{
@@ -56,6 +56,20 @@ body {
   height: 100%;
 
 }
+.backImage{
+  background-image: url("./assets//images/agency-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ max-height: fit-content;
+ height: 300px;
+}
+.sidebackImage{
+  background-image: url("./assets//images/agency-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ max-height: fit-content;
+ height: 300px;
+}
 .sxleft{
   width: 20%;
   padding: 0.2em;
@@ -64,7 +78,7 @@ body {
   .xleft{
     width: 33.3%;
     float: left;
-    padding: 0.1em;
+    padding: 0.4em;
     }
     .placeholder{
       border-radius: 12px;

@@ -1,5 +1,5 @@
 // import React from 'react';
-import sliderimg from "../../assets/images/sliderimg.png"
+// import sliderimg from "../../assets/images/sliderimg.png"
 const Arrival = () => {
   return (
     <>
@@ -7,15 +7,12 @@ const Arrival = () => {
         <div className="container">
             <br />
             <br />
-            <div className="card">
-            <div className="card">
+           
                  
                     <div className="left">
-                      <div className="card">
-                        <div className="head">
-                            <img src={sliderimg} className="w-[190px] p-4 h-[200px]" alt="saving" />
-                          </div>
-                        </div>
+                     <div className="sidebackImage">
+                      <h2 className="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, quo aut architecto libero accusantium veritatis eaque, sit repudiandae officiis officia, id nisi tempora? Voluptatem magnam unde molestiae, harum illum iure!</h2>
+                     </div>
                       </div>
                     <div className="left">
                       <div className="head">
@@ -32,27 +29,15 @@ const Arrival = () => {
                                 Nulla molestiae illum saepe hic ullam velit veritatis atque, porro a 
                                 doloremque rerum autem placeat ut odio sequi corrupti incidunt illo perspiciatis.
                             </div></div>
-                            <div className="head">
-                                <div className="box">
-                                    <ul className="links">
-                                        <li><div className="sleft"><button className="button">Buy More</button></div></li>
-
-                                        <li><div className="sright"><button className="button">Buy More</button></div></li>
-                                    </ul>
-                                    
-                         
-
-                                
-                            </div>
-                        </div>  <br />
+                          
                            <br />
                            <br />
                            <br />
                     </div>
 </div>
-</div>
-         
-        </div>
+
+        <br />
+        <br />
     </div>
     </>
   );
