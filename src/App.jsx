@@ -5,7 +5,7 @@ import Nav from "./Components/Navigation/Nav"
 // footer
 import { FooterWithLogo } from './Components/Footer/Footer'
 import { BrowserRouter, Route, Routes,  } from 'react-router-dom'
-import {CartProvider} from "./Components/Cart/context/cart"
+// import {CartProvider} from "./Components/Cart/context/cart"
 // forms
 import Home from './pages/home/Home'
 import Setting from './pages/settings/Setting'
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-    <CartProvider>
+    {/* <CartProvider> */}
     <BrowserRouter>  
     <Nav/>
 <Routes>
@@ -34,7 +34,7 @@ function App() {
 </Routes>
       <FooterWithLogo />
        </BrowserRouter>
-       </CartProvider>
+       {/* </CartProvider> */}
     </>
   )
 }

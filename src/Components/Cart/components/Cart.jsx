@@ -1,105 +1,88 @@
-import PropTypes from 'prop-types'
-import { useContext } from 'react'
-import { CartContext } from '../context/cart.jsx'
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import { Link } from 'react-router-dom'
-
-export default function Cart ({showModal, toggle}) {
-
-  const { cartItems, clearCart, getCartTotal } = useContext(CartContext)
-
-  const notifyCartCleared = () => toast.error(`Cart cleared!`, {
-    position: 'top-center',
-    autoClose: 2000,
-    hideProgressBar: true,
-    closeOnClick: true,
-    // pauseOnHover: true,
-    draggable: true,
-    theme: 'colored',
-    style: {
-      backgroundColor: '#000',
-      color: '#fff'
-    }
-  })
-
-  // const handleRemoveFromCart = (product) => {
-  //   removeFromCart(product)
-  //   notifyRemovedFromCart(product)
-  // }
+// Cart.js
+import EmptyCart from "../../../assets/images/assets/illustration-empty-cart.svg";
+import { useCart } from "../CartContext";
+import RemoveIcon from "../../../assets/images/assets/icon-remove-item.svg";
+import Carbon from "../../../assets/images/assets/icon-carbon-neutral.svg";
 
 
+function Cart({ onConfirmOrder }) {
+  const { cartItems, updateCart } = useCart();
 
+  const totalItems = cartItems.length;
+  const totalPrice = cartItems.reduce((total, item) => {
+    const price = parseFloat(item.price.replace("$", ""));
+    return total + price * item.quantity;
+  }, 0);
+
+  const handleRemove = (product) => {
+    updateCart(product, -product.quantity);
+  };
 
   return (
-    showModal && (
-      <div className="flex-col flex items-center fixed inset-0 overflow-scroll left-1/4 bg-white dark:bg-black gap-8  p-10  text-black dark:text-white font-normal uppercase text-sm">
-        <ToastContainer />
-        <h1 className="text-2xl font-bold">Cart</h1>
-        <div className="absolute">
-          <button
-            className="button bg-gray-800 text-white text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
-            onClick={toggle}
-          >
-            Close
-          </button>
+    <div className="bg-white px-6 py-6 rounded-lg">
+      <h1 className="text-2xl text-red font-bold">Your Cart ({totalItems})</h1>
+      {totalItems === 0 ? (
+        <div className="flex flex-col items-center">
+          <img src={EmptyCart} alt="Empty Cart" />
+          <p className="text-sm text-rose-500">
+            Your added items will appear here
+          </p>
         </div>
-        <div className="container" >
+      ) : (
+        <div className="flex flex-col">
           {cartItems.map((item) => (
-            <div className="flex justify-between items-center" key={item.id}>
-             
-              <div className="n">
-                <div className="left">
-                <img src={item.thumbnail} alt={item.title} className="rounded-md w-30 h-45" /></div>
-                <div className=" left">
-                  <h1 className=" font-bold">{item.title}</h1>
-                  <p className=' text-gray-600 '>{item.description}</p>
-                  <p className="text-green-600">${item.price}</p>
+            <div
+              key={item.id}
+              className="flex justify-between items-center pt-2 pb-2 border-b border-rose-100"
+            >
+              <div>
+                <p className="text-sm font-bold pb-1 text-rose-500">{item.name}</p>
+                <div className="flex items-center gap-2 font-primary text-sm">
+                  <p className="text-sm text-red">{item.quantity}x</p>
+                  <p className="text-sm text-rose-400">@ {item.price}</p>
+                  <p className="font-medium text-rose-500">
+                    $
+                    {(
+                      parseFloat(item.price.replace("$", "")) * item.quantity
+                    ).toFixed(2)}
+                  </p>
                 </div>
-              
               </div>
-              
-           
-              </div>
-           
-           
+              <button
+                onClick={() => handleRemove(item)}
+                className="bg-red-500 p-1 rounded-full border-rose-200 border-2 ml-4 hover:border-rose-500"
+              >
+                <img src={RemoveIcon} alt="" />
+              </button>
+            </div>
           ))}
-        </div>
-        {
-          cartItems.length > 0 ? (
-            <div className="flex flex-col justify-between items-center">
-          <h1 className="text-lg font-bold">Total: ${getCartTotal()}</h1>
-        
+          <div className="flex items-center justify-between pt-4 pd-2 ">
+            <p className="text-[0.7rem] font-medium text-rose-400">
+              Order Total
+            </p>
+            <p className="font-extrabold text-rose-500">
+              ${totalPrice.toFixed(2)}
+            </p>
+          </div>
+          <div className="flex items-center justify-center py-2 px-4 bg-rose-100 mt-4 rounded-lg gap-1">
+            <img src={Carbon} alt="" />
+            <p className="text-[0.7rem] font-medium text-rose-400">
+              This is a{" "}
+              <span className="font-bold text-rose-500">carbon-neutral</span>{" "}
+              delivery
+            </p>
+          </div>
+
           <button
-            className="btn px-4 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
-            onClick={() => {
-              clearCart()
-              notifyCartCleared()
-              window.reload();
-            }}
+            onClick={onConfirmOrder}
+            className="text-sm self-stretch mt-4 bg-red px-4 py-2 text-white rounded-3xl"
           >
-            Clear cart
+            Confirm Order
           </button>
-          <Link to={'/Payment/Methods'}> <button className="button py-2 px-2 mx-2 my-2 ">Payment Methods</button> </Link>
         </div>
-          ) : (
-            <button
-            className="button bg-gray-800 text-white text-xs font-bold uppercase rounded hover:bg-gray-700 focus:outline-none focus:bg-gray-700"
-            onClick={toggle}
-          >
-            Close
-          </button>
-          
-          )
-          
-        }
-      </div>
-    )
-  )
+      )}
+    </div>
+  );
 }
 
-Cart.propTypes = {
-  showModal: PropTypes.bool,
-  toggle: PropTypes.func
-}
-
+export default Cart;
