@@ -70,6 +70,12 @@ body {
  max-height: fit-content;
  height: 300px;
 }
+.backMap{
+  background-image: url("./assets/images/map.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
 .sxleft{
   width: 20%;
   padding: 0.2em;

@@ -18,7 +18,10 @@ export function FooterWithLogo() {
       <div className="col-lg-7 col-md-6 px-0">
         <div className="map_container">
           <div className="map-responsive">
-            <img src="https://maps.app.goo.gl/tX7zFkUXqMTTjJLo6" className="map w-[350px] h-[160px]" />
+            <div className="backMap">
+              <h2>Map</h2>
+            </div>
+            {/* <img src="https://www.google.com/maps/place/Masoro,+Kigali/@-1.9549507,30.1434768,15z/data=!4m6!3m5!1s0x19dca764e12dad3b:0x3f0ae3d9f610e5b2!8m2!3d-1.9464851!4d30.1502699!16s%2Fg%2F11bc6sz9sp?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D" className="map w-[350px] h-[160px]" /> */}
           </div>
         </div>
       </div>
