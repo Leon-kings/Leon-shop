@@ -70,7 +70,7 @@ const OrderModal = ({ isOpen, onClose, onStartNewOrder }) => {
 
         <button
           onClick={onStartNewOrder}
-          className=" text-sm self-stretch bg-red px-4 py-2 text-white rounded-3xl"
+          className=" text-sm self-stretch bg-red px-4 py-2 text-white bg-red-400 rounded-3xl"
         >
           Start New Order
         </button>

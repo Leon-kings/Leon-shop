@@ -20,12 +20,12 @@ function Cart({ onConfirmOrder }) {
 
   return (
     <div className="bg-white px-6 py-6 rounded-lg">
-      <h1 className="text-2xl text-red font-bold">Your Cart ({totalItems})</h1>
+      <h1 className="text-2xl text-red font-bold">Your Added  To Cart Items : ({totalItems})</h1>
       {totalItems === 0 ? (
         <div className="flex flex-col items-center">
           <img src={EmptyCart} alt="Empty Cart" />
           <p className="text-sm text-rose-500">
-            Your added items will appear here
+           Add Your Products
           </p>
         </div>
       ) : (
@@ -68,14 +68,14 @@ function Cart({ onConfirmOrder }) {
             <img src={Carbon} alt="" />
             <p className="text-[0.7rem] font-medium text-rose-400">
               This is a{" "}
-              <span className="font-bold text-rose-500">carbon-neutral</span>{" "}
+              <label htmlFor="label" className="font-bold text-rose-500">Leon-shop</label>{" "}
               delivery
             </p>
           </div>
 
           <button
             onClick={onConfirmOrder}
-            className="text-sm self-stretch mt-4 bg-red px-4 py-2 text-white rounded-3xl"
+            className="text-sm self-stretch mt-4 bg-red px-4 py-2 bg-black text-white rounded-3xl"
           >
             Confirm Order
           </button>

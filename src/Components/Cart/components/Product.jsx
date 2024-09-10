@@ -44,7 +44,7 @@ const Product = ({ product }) => {
             className={
               count > 0
                 ? "hidden"
-                : "flex bg-white -mt-5 border-rose-500 border-2 px-5 py-2 rounded-[1.5rem] transition-all duration-300 group-hover:hidden"
+                : "flex bg-white -mt-5 border-black border-2 px-5 py-2 rounded-[1.5rem] transition-all duration-300 group-hover:hidden"
             }
           >
             <span>
@@ -76,8 +76,8 @@ const Product = ({ product }) => {
         </div>
       </div>
       <div className="pl-4">
-        <p className="text-sm font-primary text-rose-300">{product.tag}</p>
-        <h1 className="text-lg text-rose-500 font-primary font-medium">
+        <p className="text-sm font-primary text-blue-400">{product.tag}</p>
+        <h1 className="text-lg text-black font-primary font-medium">
           {product.name}
         </h1>
         <p className="text-red font-primary">{product.price}</p>
