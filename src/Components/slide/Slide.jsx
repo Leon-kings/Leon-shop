@@ -39,14 +39,15 @@ const Slider = () => {
                     </div>
                 </div> 
 
-<div className="left">
+                      <div className="left">
                         <a href='/#'>
                             <img
                                 src={img}
                                 alt={`slide-${index + 1}`}
                                 className='w-[700px] h-[400px] mx-auto select-none'
                             />
-                        </a></div>
+                        </a>
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
