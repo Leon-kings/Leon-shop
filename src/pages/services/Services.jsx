@@ -1,37 +1,48 @@
 
+const Mark = () => {
+    return (
+      <mark className="mx-1 text-blue-300 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
+       
+      </mark>
+    );
+  };
   
-  export default function ThreeColOurTeams() {
+  export default function ThreeServices() {
     const data = [
       {
         content: (
           <>
-          We Offer Delivery System Where We can Deliver Your Goods to Your Residence
+            Share a<Mark>Services</Mark>
+            that hits some of your benefits from one of your popular
+            customer.
           </>
         ),
-        author: "Delivery System",
-        title: "We delivery to your Adress",
+        author: "Sarah Steiner",
+        title: "VP Sales at Google",
         avatar:
           "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMTQ5ODEx&ixlib=rb-1.2.1&q=80&w=100&h=100",
       },
       {
         content: (
           <>
-           We Provide Best Quality From Doubai And from Asian Clothes Market
+            Make sure you only pick the <Mark>right sentence</Mark> to
+            keep it short and simple.
           </>
         ),
-        author: "Quality Products",
-        title: "We Offer Better Quality ",
+        author: "Dylan Ambrose",
+        title: "Lead marketer at Netflix ",
         avatar:
           "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&crop=faces&fit=crop&w=100&h=100&q=80",
       },
       {
         content: (
           <>
-         We Provide Better Price For Better Products From Wherever World Market
+            This is an <Mark>awesome</Mark> landing page template Ive
+            seen. I would use this for anything.
           </>
         ),
-        author: "Affordable Price",
-        title: "We offer low priced products",
+        author: "Gabrielle Winn",
+        title: "Co-founder of Acme Inc",
         avatar:
           "https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100&crop=faces&q=80",
       },
@@ -43,12 +54,14 @@
         <div className="pb-5">
           <div className="container flex flex-col items-center justify-center w-full p-6 mx-auto mt-4 text-center xl:px-0">
             <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
-             WHY US?
+              Our Services
             </div>
             <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-              We offer better Quality and better Products
+              Here is Our Services We Provide
             </h2>
-
+            <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
+             As Leon-shop , We Provide Better Product 
+            </p>
           </div>
   
           <div className="container p-6 mx-auto mb-10 xl:px-0">
@@ -60,14 +73,14 @@
                     index === 0 ? "lg:col-span-2 xl:col-auto" : ""
                   }
                   key={index}>
-
-
-                    
                   <div className="flex flex-col justify-between w-full h-full px-6 py-6 bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
-                  <div className="flex items-center mt-8 space-x-3">
+                    <p className="text-2xl leading-normal">
+                      {item.content}
+                    </p>
+                    <div className="flex items-center mt-8 space-x-3">
                       <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
                         <img
-                          alt={item.author}
+                          alt="Avatar"
                           src={item.avatar}
                           loading="lazy"
                         />
@@ -81,10 +94,6 @@
                         </div>
                       </div>
                     </div>
-                    <p className="text-2xl leading-normal">
-                      {item.content}
-                    </p>
-
                   </div>
                 </div>
               ))}

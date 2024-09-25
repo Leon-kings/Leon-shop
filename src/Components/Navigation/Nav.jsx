@@ -3,13 +3,12 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'Team', href: './pages/Team', current: false },
-  { name: 'About', href: '#', current: false },
-  { name: 'Services', href: '#', current: false },
-  { name: 'Contact ', href: '#', current: false },
-  // { name: 'New Profile', href: '#', current: false },
+  { name: 'Team', href: '/team', current: false },
+  { name: 'About', href: '/About-Leon-shop', current: false },
+  { name: 'Services', href: '/Services-Leon-shop', current: false },
+  { name: 'Contact ', href: '/Contact-Leon-shop', current: false },
   { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Calendar', href: '#', current: false }
 ]
 
 function classNames(...classes) {

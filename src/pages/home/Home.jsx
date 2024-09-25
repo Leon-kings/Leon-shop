@@ -8,6 +8,9 @@ import Arrival from "../../HomeComponent/arrival/Arrival"
 import Testimony from "../../HomeComponent/testmony/Testimony"
 import Register from "../../pages/registration/registration/Register"
 import App from "../../Components/Cart/App"
+import Women from "../../Components/WomenCart/Women"
+import Babies from "../../Components/cartComponents/Babies/Babies"
+// import PaymenthtmlForm from "../paymentform/PaymentForm"
 function Home() {
   return (
   <>
@@ -89,7 +92,24 @@ function Home() {
           
             </div>
         </div>
+{/* <PaymenthtmlForm/> */}
+<div className="view px-1 py-1">
+            <div className="head px-0 py-0">
+                <h2 className="text-center hover:text-red-500">
+                </h2>
+                <Women/>
+          
+            </div>
+        </div>
 
+        <div className="view px-1 py-1">
+            <div className="head px-0 py-0">
+                <h2 className="text-center hover:text-red-500">
+                </h2>
+                <Babies/>
+          
+            </div>
+        </div>
 
     </div>
     <br />

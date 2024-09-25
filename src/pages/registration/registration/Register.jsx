@@ -107,7 +107,7 @@ const App =()=>{
             </div>
             <div className="w-full flex-1 mt-8">
               <div className="mx-auto max-w-xs flex flex-col gap-4">
-              <form onSubmit={handleSubmit} >
+              <form className="form" onSubmit={handleSubmit} >
        
        <div className="contain">
        {inputs.map((input)=>(

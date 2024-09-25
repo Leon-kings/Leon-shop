@@ -40,7 +40,7 @@ const Slider = () => {
                 </div> 
 
                       <div className="left">
-                        <a href='/#'>
+                        <a href='/'>
                             <img
                                 src={img}
                                 alt={`slide-${index + 1}`}

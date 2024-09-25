@@ -99,7 +99,7 @@ const Login =()=>{
             </div>
             <div className="w-full flex-1 mt-8">
               <div className="mx-auto max-w-xs flex flex-col gap-4">
-              <form onSubmit={handleSubmit} >
+              <form className="form" onSubmit={handleSubmit} >
        
        <div className="loginContainer">
        {inputs.map((input)=>(
@@ -123,7 +123,7 @@ const Login =()=>{
                   </svg>
                   <p className="ml-3">Sign In</p>
                 </button>
-       <p>If you don`t have an account got <a ><Link to="/Register"><b><button className="p-2 bg-blue-400 hover:bg-fuchsia-200"> Register</button></b> </Link> </a></p>
+       <p>If you don`t have an account got <a ><Link to="/Registration"><b><button className="p-2 bg-blue-400 hover:bg-fuchsia-200"> Register</button></b> </Link> </a></p>
        </div>
        </div>
      </form>
