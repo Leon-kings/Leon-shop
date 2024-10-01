@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/controller';
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
 
@@ -35,18 +36,19 @@ const Slider = () => {
                     </div>
                     <br />
                     <div className="contact text-center py-3">
-<button className='btn bg-blue-700 text-white px-3 py-3'>Contact us</button>
+                        <Link to="/contact">
+<button className='btn bg-blue-700 text-white px-3 py-3'>Contact us</button></Link>
                     </div>
                 </div> 
 
                       <div className="left">
-                        <a href='/'>
+                        
                             <img
                                 src={img}
                                 alt={`slide-${index + 1}`}
                                 className='w-[700px] h-[400px] mx-auto select-none'
                             />
-                        </a>
+                        
                         </div>
                     </SwiperSlide>
                 ))}

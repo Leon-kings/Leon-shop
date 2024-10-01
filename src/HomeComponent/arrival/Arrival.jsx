@@ -1,3 +1,4 @@
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 const Arrival = () => {
   return (
@@ -25,8 +26,8 @@ const Arrival = () => {
                       Ratione cumque assumenda sequi iste! Unde repellat suscipit distinctio eaque nobis?</h3>
 
                     <div className="buttonKey flex m-5 gap-10">
-                      <button className="mt-5 tracking-wide font-semibold bg-blue-900 text-gray-100 w-1/2 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">Message</button>
-                      <button className=" mt-5 tracking-wide font-semibold bg-blue-600 text-gray-100 w-1/2 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"><Link to={'/Contact-Leon-shop'}>Contact</Link> </button>
+                      <button className="sm:*:m-0 mt-5 tracking-wide font-semibold bg-blue-900 text-gray-100 w-1/2 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"><Link to={'/Login'}><EnvelopeIcon className="text-white w-6 "/> </Link> </button>
+                      <button className=" sm:*:m-0 mt-5 tracking-wide font-semibold bg-blue-600 text-gray-100 w-1/2 py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"><Link to={'/Contact-Leon-shop'}>Contact</Link> </button>
                     </div>
                   </div>
                 </div>

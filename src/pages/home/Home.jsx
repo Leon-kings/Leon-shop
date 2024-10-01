@@ -10,7 +10,7 @@ import Register from "../../pages/registration/registration/Register"
 import App from "../../Components/Cart/App"
 import Women from "../../Components/WomenCart/Women"
 import Babies from "../../Components/cartComponents/Babies/Babies"
-// import PaymenthtmlForm from "../paymentform/PaymentForm"
+
 function Home() {
   return (
   <>
@@ -63,7 +63,7 @@ function Home() {
             </div>
         </div>
 
-   
+  
 
         <div className="view px-1 py-1">
             <div className="head px-0 py-0">

@@ -14,12 +14,13 @@ import ThreeColOurTeams from './pages/team/OurTeam'
 import ThreeAbout from './pages/about/About'
 import ThreeServices from './pages/services/Services'
 import ThreeContact from './pages/contact/Contact'
+import ViewAll from './pages/product/ViewAll'
 // import Shop from './pages/shop/Shop'
 // BrowserRouter
 function App() {
   return (
     <>
-    {/* <CartProvider> */}
+  
     <BrowserRouter>  
     <Nav/>
 <Routes>
@@ -36,7 +37,7 @@ function App() {
     <Route element={<ThreeContact />} path='/Contact-Leon-shop'></Route>
     {/*  */}
     {/* <Route element={<Shop />} path='/shop'></Route> */}
-    {/* <Route element={<Home />} path='/'></Route> */}
+    <Route element={<ViewAll />} path='/viewall'></Route>
 </Routes>
       <FooterWithLogo />
        </BrowserRouter>
