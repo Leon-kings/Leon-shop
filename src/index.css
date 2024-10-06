@@ -149,7 +149,14 @@ body {
       display: inline;
       display: flex;
     }
-
+.pleft{
+  width: 75%;
+  float: left;
+}
+.psleft{
+  float: left;
+  width: 25%;
+}
     .box{
       border: 1px solid black;
       padding: 2px;

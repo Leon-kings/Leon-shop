@@ -20,7 +20,8 @@ function Home() {
             <Slider/>
             </div>
         </div>
-        <hr className="bg-blue-400 text-blue-800"/>
+
+        <hr className="bg-blue-400 m-4 p-1 text-blue-800"/>
         <br />
         <div className="container px-2 py-2">
           <div className="products">

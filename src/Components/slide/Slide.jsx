@@ -9,7 +9,12 @@ import { Link } from 'react-router-dom';
 
 const Slider = () => {
 
-    const images = ['https://images.pexels.com/photos/16770561/pexels-photo-16770561/free-photo-of-scenic-view-of-green-hills-and-mountains.jpeg', 'https://images.pexels.com/photos/20041507/pexels-photo-20041507/free-photo-of-close-up-of-sleeping-cat.jpeg', 'https://images.pexels.com/photos/12187128/pexels-photo-12187128.jpeg', 'https://images.pexels.com/photos/11785594/pexels-photo-11785594.jpeg']
+    const images = [
+        'https://media.istockphoto.com/id/1293366109/photo/this-one-match-perfect-with-me.jpg?s=612x612&w=0&k=20&c=wJ6yYbRrDfdmoViuQkX39s2z_0lCiNQYgEtLU--0EbY=', 
+        'https://media.istockphoto.com/id/155596905/photo/high-class-female-clothing.jpg?s=612x612&w=0&k=20&c=V1HcqglhOc76MHidrmyPjraiMNXwhAzO-wMHbEMMEqM=', 
+        'https://t4.ftcdn.net/jpg/00/97/81/69/360_F_97816948_KnKa0XqSjvm36lIQqYSiiTih2oVoi2At.jpg', 
+        'https://www.shutterstock.com/image-photo/beach-couple-walking-on-romantic-600nw-188237870.jpg'
+    ]
 
     return (
         <section className='bg-white mt-10 mx-4 sm:mx-8 md:mx-20 lg:mx-36 z-10'>
