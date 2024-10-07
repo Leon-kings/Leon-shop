@@ -1,5 +1,5 @@
 // Cart.js
-import EmptyCart from "../../../assets/images/assets/illustration-empty-cart.svg";
+import EmptyCart from "../../../assets/images/icon-add-to-cart.svg";
 import { useCart } from "../CartContext";
 import RemoveIcon from "../../../assets/images/assets/icon-remove-item.svg";
 import Carbon from "../../../assets/images/assets/icon-carbon-neutral.svg";
@@ -19,11 +19,11 @@ function Cart({ onConfirmOrder }) {
   };
 
   return (
-    <div className="bg-white px-6 py-6 rounded-lg">
+    <div className="  bg-gray-100 dark:bg-gray-800 md:px-14 rounded-2xl md:py-14 dark:bg-trueGray-800">
       <h1 className="text-2xl text-red font-bold">Your Added  To Cart Items : ({totalItems})</h1>
       {totalItems === 0 ? (
         <div className="flex flex-col items-center">
-          <img src={EmptyCart} alt="Empty Cart" />
+          <img src={EmptyCart} alt="Empty Cart"  />
           <p className="text-sm text-rose-500">
            Add Your Products
           </p>
@@ -52,7 +52,7 @@ function Cart({ onConfirmOrder }) {
                 onClick={() => handleRemove(item)}
                 className="bg-red-500 p-1 rounded-full border-rose-200 border-2 ml-4 hover:border-rose-500"
               >
-                <img src={RemoveIcon} alt="" />
+                <img src={RemoveIcon} className="w-8 md:w-6" alt="" />
               </button>
             </div>
           ))}
